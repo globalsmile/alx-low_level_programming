@@ -19,6 +19,7 @@ int main(void)
 		counter++;
 		printf("%.0f", c);
 		a = b;
+		b = c;
 		c = a + b;
 		if (counter < 98)
 		{
