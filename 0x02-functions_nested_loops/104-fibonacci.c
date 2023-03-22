@@ -16,10 +16,9 @@ int main(void)
 	printf("%.0f, ", b);
 	while (counter < 98)
 	{
-		++counter;
+		counter++;
 		printf("%.0f", c);
 		a = b;
-		b = c;
 		c = a + b;
 		if (counter < 98)
 		{
