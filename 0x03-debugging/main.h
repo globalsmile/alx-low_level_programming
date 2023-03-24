@@ -3,8 +3,9 @@
 
 #include <stdio.h>
 /**
- * print_alphabet - function to print alphabet
- *
+ * positive_or_negative - returns positive or negative number
+ * @i: represents an integer
+ * Return: Positive or negative number or 0
  */
 void positive_or_negative(int i);
 /**
