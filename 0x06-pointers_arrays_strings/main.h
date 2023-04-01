@@ -268,7 +268,7 @@ void print_number(int n);
  */
 void reset_to_98(int *n);
 /**
- * swap_int - swapts integer values
+ * swap_int - swaps integer values
  * @a: first integer
  * @b: second integer
  */
@@ -280,4 +280,30 @@ void swap_int(int *a, int *b);
  * Return: returns length
  */
 int _strlen(char *s);
+/**
+ * infinte_add - adds two numbers
+ * @n1: first integer
+ * @n2: second integer
+ * @r: function to store the result
+ * @size_r: buffer size
+ *
+ * Return: Always 0
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+/**
+ * rev_string - reverse array
+ * @n: integer
+ * Return: Always void
+ *
+ */
+void rev_string(char *n);
+/**
+ * print_buffer - prints buffer
+ * @b: buffer
+ * @size: size of buffer
+ *
+ * Return: void
+ *
+ */
+void print_buffer(char *b, int size);
 #endif
