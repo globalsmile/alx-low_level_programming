@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_diagsums - prints diagonal summaries
  * @a: array to use
@@ -15,8 +16,5 @@ void print_diagsums(int *a, int size)
 		diagO += a[(k * size) + k];
 		diagT += a[(size - 1) + ((size - 1) * k)];
 	}
-	_putchar(diagO + '0');
-	_putchar(' ');
-	_putchar(diagT + '0');
-	_putchar('\n')
+	printf("%d, %d\n", diagO, diagT);
 }
