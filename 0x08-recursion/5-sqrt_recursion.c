@@ -15,7 +15,7 @@ int helper(int k, int j)
 		{
 			return (-1);
 		}
-		j = helper(k + 1, j);
+		p = helper(k + 1, j);
 		return (p + 1);
 	}
 	return (0);
