@@ -10,7 +10,7 @@ int lengthy(char *s)
 
 	if (*s)
 	{
-		k = k + length(s + 1);
+		k = k + lengthy(s + 1);
 		return (k += 1);
 	}
 	return (0);
@@ -25,7 +25,7 @@ int helper2(int p, char *s)
 {
 	if (*s)
 	{
-		if (*s != s[length(s) - p])
+		if (*s != s[lengthy(s) - p])
 		{
 			return (0);
 		}
