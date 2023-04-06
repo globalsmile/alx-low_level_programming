@@ -11,7 +11,7 @@ int findsrc(char *s, char c, int a, int b)
 {
 	if (*(s + a) == '\0')
 		return (b + 1);
-	else if (*(s + a) == c || *(s + b) == '*')
+	else if (*(s + a) == c || *(s + a) == '*')
 		b = a;
 
 	return (findsrc(s, c, a + 1, b));
@@ -25,14 +25,14 @@ int findsrc(char *s, char c, int a, int b)
 int wildcmp(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
-		return (1);
+		return (0);
 	else if (*s1 == '\0' || *s2 == '\0')
 	{
 		if (*s1 == '\0' && *s2 == '*')
 			return (wildcmp(s1, ++s2));
 		else if (*s1 == '*' && *s2 == '\0')
 			return (wildcmp(++s1, s2));
-		return (0);
+		return (1);
 	}
 
 	if (*s1 == *s2)
