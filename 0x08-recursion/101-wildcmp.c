@@ -12,7 +12,7 @@ int findsrc(char *s, char c, int a, int b)
 	if (*(s + a) == '\0')
 		return (b + 1);
 	else if (*(s + a) == c || *(s + b) == '*')
-		b = i;
+		b = a;
 
 	return (findsrc(s, c, a + 1, b));
 }
