@@ -1,51 +1,52 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 /**
- * main - entry point
- * @argc: count of arguments
- * @argv: pointer to an array to chars
- * Return: always 0
+ * main - print the min number of coins to make change for an amount of money
+ * @argc: argument count
+ * @argv: argument vector, array of strings
+ * Return: 1 if error, 0 otherwise
  */
-int main(int argc, char  *argv[])
+
+int main(int argc, char *argv[])
 {
-	int n_coins = 0;
-	int sum_m;
+	int total, count;
+	unsigned int i;
+	char *p;
+	int cents[] = {25, 10, 5, 2};
 
-	if (argc == 2)
+	if (argc != 2)
 	{
-		if (strchr(argv[argc - 1], '-'))
-		{
-			printf("0\n");
-			return (1);
-		}
-
-		sum_m = atoi(argv[argc - 1]);
-
-		while (sum_m > 0)
-		{
-			if (sum_m % 25 == 0)
-			{
-				sum_m -= 25;
-			} else if (sum_m % 10 == 0)
-			{
-				sum_m -= 10;
-			} else if (sum_m % 5 == 0)
-			{
-				sum_m -= 5;
-			} else if (sum_m % 2 == 0)
-			{
-				sum_m -= 2;
-			} else
-			{
-				sum_m--;
-			}
-			n_coins++;
-		}
-		printf("%d\n", n_coins);
-		return (0);
+		printf("Error\n");
+		return (1);
 	}
-	printf("Error\n");
-	return (1);
+
+	total = strtol(argv[1], &p, 10);
+	count = 0;
+
+	if (!*p)
+	{
+		while (total > 1)
+		{
+			for (i = 0; i < sizeof(cents[i]); i++)
+			{
+				if (total >= cents[i])
+				{
+					count += total / cents[i];
+					total = total % cents[i];
+				}
+			}
+		}
+		if (total == 1)
+			count++;
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	printf("%d\n", count);
+	return (0);
 }
