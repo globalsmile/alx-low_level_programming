@@ -11,10 +11,10 @@
 
 int main(int argc, char *argv[])
 {
-	int total, count;
-	unsigned int i;
+	int money, counter;
+	unsigned int j;
 	char *p;
-	int cents[] = {25, 10, 5, 2};
+	int coin[] = {25, 10, 5, 2};
 
 	if (argc != 2)
 	{
@@ -22,24 +22,24 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	total = strtol(argv[1], &p, 10);
-	count = 0;
+	money = strtol(argv[1], &p, 10);
+	counter = 0;
 
 	if (!*p)
 	{
-		while (total > 1)
+		while (money > 1)
 		{
-			for (i = 0; i < sizeof(cents[i]); i++)
+			for (j = 0; j < sizeof(coin[j]); j++)
 			{
-				if (total >= cents[i])
+				if (money >= coin[j])
 				{
-					count += total / cents[i];
-					total = total % cents[i];
+					counter += money / coin[j];
+					money = money % coin[j];
 				}
 			}
 		}
-		if (total == 1)
-			count++;
+		if (money == 1)
+			counter++;
 	}
 	else
 	{
@@ -47,6 +47,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	printf("%d\n", count);
+	printf("%d\n", counter);
 	return (0);
 }
