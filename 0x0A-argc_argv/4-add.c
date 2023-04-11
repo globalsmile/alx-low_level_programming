@@ -12,9 +12,9 @@ int StringChecker(char *k)
 {
 	int j = 0;
 
-	for (; s[j] != '\0'; j++)
+	for (; k[j] != '\0'; j++)
 	{
-		if (!isdigit(s[j]))
+		if (!isdigit(k[j]))
 		{
 			return (0);
 		}
