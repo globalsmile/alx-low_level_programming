@@ -32,7 +32,7 @@ char **helper(int wordly, int len, char *str, char **s)
 		}
 		s[p][r + 1] = '\0';
 	}
-	s[word + 1] = NULL;
+	s[wordly + 1] = NULL;
 	return (s);
 }
 /**
