@@ -1,46 +1,44 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 /**
- * argstostr - gives array of args
+ * argstostr - concatenate all arguments of your program with newline
  * @ac: argument count
- * @av: array of arguments
- * Return: char value
+ * @av: double pointer to array of strings passed to main
+ * Return: Null if fail, else return pointer to new string
  */
+
 char *argstostr(int ac, char **av)
 {
-	int sizes;
-	char *st;
-	int p;
-	int q;
-	int r;
+	char *a, *retp;
+	int i, j, total;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (p = 0; p < ac; p++)
+	for (i = 0, total = 0; i < ac; i++)
 	{
-		for (q = 0; av[p][q] != '\0'; q++)
-			sizes++;
+		for (j = 0; *(*(av + i) + j) != '\0'; j++, total++)
+			;
+		total++;
 	}
+	total++;
 
-	sizes += (ac + 1);
-	st = malloc(sizeof(char) * sizes);
-	if (st == NULL)
+	a = malloc(total * sizeof(char));
+	if (a == NULL)
 		return (NULL);
-	r = 0;
-	for (p = 0; p < ac; p++)
+
+	retp = a;
+	for (i = 0; i < ac; i++)
 	{
-		for (q = 0; av[p][q] != '\0'; q++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			st[r] = av[p][q];
-			r++;
+			*a = av[i][j];
+			a++;
 		}
-		st[r] = '\n';
-		r++;
+		*a = '\n';
+		a++;
 	}
 
-	st[r] = '\0';
-
-	return (st);
+	return (retp);
 }
