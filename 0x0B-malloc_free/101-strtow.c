@@ -71,7 +71,7 @@ char **strtow(char *str)
 			if (str[q] == ' ' && sizes > 0)
 				break;
 		}
-		printf("%d\n", sizes);
+
 		st[p] = (char *)malloc(sizeof(char) * sizes + 1);
 		if (st[p] == NULL)
 		{
