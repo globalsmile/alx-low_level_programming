@@ -61,7 +61,7 @@ char **strtow(char *str)
 	if (st == NULL)
 		return (NULL);
 	q = 0;
-	for (p = 0; p < word; p++)
+	for (p = 0; p < words; p++)
 	{
 		sizes = 0;
 		for (; q < length; q++)
