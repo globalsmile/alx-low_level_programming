@@ -9,12 +9,12 @@
  * @s: array you are assigning
  * Return: char value
  */
-char **helper(int word, int len, char *str, char **s)
+char **helper(int wordly, int len, char *str, char **s)
 {
 	int p, r, q;
 
 	q = 0;
-	for (p = 0; p < word; p++)
+	for (p = 0; p < wordly; p++)
 	{
 		r = 0;
 		for (; q < len; q++)
@@ -64,7 +64,7 @@ char **strtow(char *str)
 	for (p = 0; p < word; p++)
 	{
 		sizes = 0;
-		for (; q < len; q++)
+		for (; q < length; q++)
 		{
 			if (str[0] != ' ' || str[q] != ' ')
 				sizes++;
