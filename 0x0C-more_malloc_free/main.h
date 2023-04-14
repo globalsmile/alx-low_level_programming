@@ -463,4 +463,17 @@ void *malloc_checked(unsigned int b);
  * Return: char value
  */
 char **strtow(char *str);
+/**
+ * is_valid_num - Check if the given string is a valid number
+ * @number: string to check?
+ * Return: 0 or 1
+ */
+int is_valid_num(const char *number);
+/**
+ * multiply - Multiply two positive numbers
+ * @number1: integer 1
+ * @number2: integer 2
+ * Return: Returns a dynamically allocated string
+ */
+char *multiply(const char *number1, const char *number2);
 #endif
