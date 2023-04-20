@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	for (num = 0; num < byte; num++)
 	{
 		opc = *(unsigned char *)addr;
-		printf("%.2x",opc);
+		printf("%.2x", opc);
 
 		if (num == byte - 1)
 			continue;
