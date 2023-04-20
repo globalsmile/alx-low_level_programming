@@ -3,29 +3,29 @@
 #include <udis86.h>
 
 /**
-  * main - entry point
-  * @argc: count of characters
-  * @argv: array of argc
+  * main - ...
+  * @argc: ...
+  * @argv: ...
   *
-  * Return: int value
+  * Return: ...
   */
 int main(int argc, char *argv[])
 {
 	ud_t ud_obj;
-	int pal = 0, k = 0;
+	int val = 0, i = 0;
 
 	if (argc == 2)
 	{
-		pal = atoi(argv[1]);
+		val = atoi(argv[1]);
 
-		if (pal < 0)
+		if (val < 0)
 		{
 			printf("Error\n");
 			exit(2);
 		}
 
 		ud_unit(&ud_obj);
-		ud_set_input_buffer(&ud_obj, argv[1], pal);
+		ud_set_input_buffer(&ud_obj, argv[1], val);
 		ud_set_mode(&ud_obj, 64);
 		ud_set_syntax(&ud_obj, UD_SYN_INTEL);
 
