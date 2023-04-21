@@ -9,7 +9,11 @@ void _printchar(va_list list);
 void _printstr(va_list list);
 void _printfloat(va_list list);
 void _printint(va_list list);
-
+/**
+ * struct checker - struct for 3
+ * @type: character to check
+ * @f: function to point to
+ */
 typedef struct checker
 {
 	char *type;
