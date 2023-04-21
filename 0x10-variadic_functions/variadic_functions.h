@@ -1,25 +1,23 @@
 #ifndef _HEADER_
 #define _HEADER_
 #include <stdarg.h>
-
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-void print_a_char(char *separator, va_list args);
-void print_a_integer(char *separator, va_list args);
-void print_a_float(char *separator, va_list args);
-void print_a_char_ptr(char *separator, va_list args);
-
+int print_c(va_list a);
+int print_i(va_list a);
+int print_f(va_list a);
+int print_s(va_list a);
 /**
- * struct format_types - Struct format_types
- * @identifier: The conversion specifier
- * @f: The function pointer
+ * struct op - struct for 3
+ * @c: character to check
+ * @f: function to point to
  */
-typedef struct format_types
+typedef struct op
 {
-	char *identifier;
-	void (*f)(char *separator, va_list args);
-} f_dt;
+	char *c;
+	int (*f)(va_list a);
+} printer;
 #endif
