@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  * helper - helps function
- * @word: wordcount
+ * @wordly: wordcount
  * @len: length
  * @str: string to go through
  * @s: array you are assigning
