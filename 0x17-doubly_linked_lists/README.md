@@ -1,4 +1,5 @@
-# Doubly linked lists
+# 0x17. C - Doubly linked lists
+
 
 # Learning Objectives
 
@@ -16,10 +17,10 @@ Write a function that prints all the elements of a `dlistint_t` list.
 * Return: the number of nodes
 * Format: see example
 
-**Solution:** [0-print_dlistint.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/0-print_dlistint.c)
+**Solution:** [0-print_dlistint.c](./0-print_dlistint.c)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ cat 0-main.c 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ cat 0-main.c 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -54,12 +55,12 @@ int main(void)
     free(new);
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 0-main.c 0-print_dlistint.c -o a
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./a 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 0-main.c 0-print_dlistint.c -o a
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ ./a 
 9
 8
 -> 2 elements
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$
 ```
 
 ## List length
@@ -68,10 +69,10 @@ Write a function that returns the number of elements in a linked `dlistint_t` li
 
 * Prototype: `size_t dlistint_len(const dlistint_t *h);`
 
-**Solution:** [1-dlistint_len.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/1-dlistint_len.c)
+**Solution:** [1-dlistint_len.c](./1-dlistint_len.c)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ cat 1-main.c 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ cat 1-main.c 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -106,10 +107,10 @@ int main(void)
     free(new);
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-dlistint_len.c -o b
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./b 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-dlistint_len.c -o b
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ ./b 
 -> 2 elements
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$
 ```
 
 ## Add node
@@ -119,10 +120,10 @@ Write a function that adds a new node at the beginning of a `dlistint_t` list.
 * Prototype: `dlistint_t *add_dnodeint(dlistint_t **head, const int n);`
 * Return: the address of the new element, or `NULL` if it failed
 
-**Solution:** [2-add_dnodeint.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/2-add_dnodeint.c)
+**Solution:** [2-add_dnodeint.c](./2-add_dnodeint.c)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ cat 2-main.c 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ cat 2-main.c 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -149,8 +150,8 @@ int main(void)
     print_dlistint(head);
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 2-main.c 2-add_dnodeint.c 0-print_dlistint.c -o c
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./c 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 2-main.c 2-add_dnodeint.c 0-print_dlistint.c -o c
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ ./c 
 1024
 402
 98
@@ -159,7 +160,7 @@ $ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./c
 2
 1
 0
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$
 ```
 
 ## Add node at the end
@@ -169,10 +170,10 @@ Write a function that adds a new node at the end of a dlistint_t list.
 * Prototype: `dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);`
 * Return: the address of the new element, or `NULL` if it failed
 
-**Solution:** [3-add_dnodeint_end.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/3-add_dnodeint_end.c)
+**Solution:** [3-add_dnodeint_end.c](./3-add_dnodeint_end.c)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ cat 3-main.c 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ cat 3-main.c 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -199,8 +200,8 @@ int main(void)
     print_dlistint(head);
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 3-main.c 3-add_dnodeint_end.c 0-print_dlistint.c -o d
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./d 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 3-main.c 3-add_dnodeint_end.c 0-print_dlistint.c -o d
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ ./d 
 0
 1
 2
@@ -209,7 +210,7 @@ $ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./d
 98
 402
 1024
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$
 ```
 
 ## Free list
@@ -218,10 +219,10 @@ Write a function that free a dlistint_t list.
 
 * Prototype: `void free_dlistint(dlistint_t *head);`
 
-**Solution:** [4-free_dlistint.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/4-free_dlistint.c)
+**Solution:** [4-free_dlistint.c](./4-free_dlistint.c)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ cat 4-main.c
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ cat 4-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -250,8 +251,8 @@ int main(void)
     head = NULL;
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 4-main.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c -o e
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ valgrind ./e 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 4-main.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c -o e
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ valgrind ./e 
 ==4197== Memcheck, a memory error detector
 ==4197== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
 ==4197== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
@@ -274,7 +275,7 @@ $ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ valgrind ./e
 ==4197== 
 ==4197== For counts of detected and suppressed errors, rerun with: -v
 ==4197== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$
 ```
 
 ## Get node at index
@@ -285,10 +286,10 @@ Write a function that returns the nth node of a `dlistint_t` linked list.
 * where `index` is the index of the node, starting from `0`
 * if the node does not exist, return `NULL`
 
-**Solution:** [5-get_dnodeint.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/5-get_dnodeint.c)
+**Solution:** [5-get_dnodeint.c](./5-get_dnodeint.c)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ cat 5-main.c
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ cat 5-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -320,8 +321,8 @@ int main(void)
     head = NULL;
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 5-main.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 5-get_dnodeint.c -o h
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./h
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 5-main.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 5-get_dnodeint.c -o h
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ ./h
 0
 1
 2
@@ -331,7 +332,7 @@ $ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./h
 402
 1024
 98
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$
 ```
 
 ## Sum list
@@ -341,10 +342,10 @@ Write a function that returns the sum of all the data (n) of a `dlistint_t` link
 * Prototype: `int sum_dlistint(dlistint_t *head);`
 * if the list is empty, return `0`
 
-**Solution:** [6-sum_dlistint.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/6-sum_dlistint.c)
+**Solution:** [6-sum_dlistint.c](./6-sum_dlistint.c)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ cat 6-main.c 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ cat 6-main.c 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -375,10 +376,10 @@ int main(void)
     head = NULL;
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 6-main.c 3-add_dnodeint_end.c 4-free_dlistint.c 6-sum_dlistint.c -o i
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./i 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 6-main.c 3-add_dnodeint_end.c 4-free_dlistint.c 6-sum_dlistint.c -o i
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ ./i 
 sum = 1534
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$
 ```
 
 ## Insert at index
@@ -390,10 +391,10 @@ Write a function that inserts a new node at a given position.
 * Returns: the address of the new node, or `NULL` if it failed
 * if it is not possible to add the new node at index `idx`, do not add the new node and return `NULL`
 
-**Solution:** [7-insert_dnodeint.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/7-insert_dnodeint.c), [2-add_dnodeint.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/2-add_dnodeint.c), [3-add_dnodeint_end.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/3-add_dnodeint_end.c)
+**Solution:** [7-insert_dnodeint.c](./7-insert_dnodeint.c), [2-add_dnodeint.c](./2-add_dnodeint.c), [3-add_dnodeint_end.c](./3-add_dnodeint_end.c)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ cat 7-main.c
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ cat 7-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -425,8 +426,8 @@ int main(void)
     head = NULL;
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 7-main.c 2-add_dnodeint.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 7-insert_dnodeint.c -o j
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./j 
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 7-main.c 2-add_dnodeint.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 7-insert_dnodeint.c -o j
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ ./j 
 0
 1
 2
@@ -445,7 +446,7 @@ $ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./j
 98
 402
 1024
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$
 ```
 
 ## Delete at index
@@ -456,10 +457,10 @@ Write a function that deletes the node at index index of a `dlistint_t` linked l
 * where `index` is the index of the node that should be deleted. Index starts at `0`
 * Returns: `1` if it succeeded, `-1` if it failed
 
-**Solution:** [8-delete_dnodeint.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/8-delete_dnodeint.c)
+**Solution:** [8-delete_dnodeint.c](./8-delete_dnodeint.c)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ cat 8-main.c
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ cat 8-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -528,8 +529,8 @@ int main(void)
     print_dlistint(head);
     return (0);
 }
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 8-main.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 8-delete_dnodeint.c -o k
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./k
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra 8-main.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 8-delete_dnodeint.c -o k
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$ ./k
 0
 1
 2
@@ -583,7 +584,7 @@ $ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$ ./k
 -----------------
 -----------------
 -----------------
-$ amonkeyprogrammer@ubuntu:~/0x17. Doubly linked lists$
+$ globalsmile@ubuntu:~/0x17. Doubly linked lists$
 ```
 
 ## Crackme4
@@ -594,7 +595,7 @@ Find the password for [crackme4](https://github.com/holbertonschool/0x17.c).
 * Your file should contain the exact password, no new line, no extra space
 * Hint: The program prints “OK” when the password is correct
 
-**Solution:** [100-password](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/100-password)
+**Solution:** [100-password](./100-password)
 
 ## Palindromes
 
@@ -605,4 +606,23 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 * Save the result in the file `102-result`
 * Your file should contain the exact result, no new line, no extra space
 
-**Solution:** [102-result](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x17-doubly_linked_lists/102-result)
+**Solution:** [102-result](./102-result)
+
+## crackme5
+
+Write a keygen for [crackme5](https://github.com/alx-tools/0x17.c).
+* Usage of the crackme: `./crackme5 username key`
+* The crackme will segfault if you do not enter the correct key for the user
+* Usage for your keygen: `./keygen5 username`
+* Your keygen should print a valid key for the `username`
+
+```
+globalsmile@ubuntu:~/0x17$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 103-keygen.c -o keygen5
+globalsmile@ubuntu:~/0x17$ ./crackme5 julien javascript
+Segmentation fault (core dumped)
+globalsmile@ubuntu:~/0x17$ ./crackme5 julien `./keygen5 julien`
+Congrats!
+globalsmile@ubuntu:~/0x17$ 
+```
+
+**Solution:** [103-keygen.c](./103-keygen.c)
