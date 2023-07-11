@@ -1,4 +1,5 @@
-# Dynamic libraries
+# 0x18. C - Dynamic libraries
+
 
 # Learning Objectives
 
@@ -40,9 +41,9 @@ If you haven’t coded all of the above functions create empty ones, with the ri
 Don’t forget to push your `holberton.h` file in your repository, containing at least all the prototypes of the above functions.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ ls -la lib*
--rwxrwxr-x 1 $ amonkeyprogrammer $ amonkeyprogrammer 13632 Jan  7 06:25 libholberton.so
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ nm -D libholberton.so 
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ ls -la lib*
+-rwxrwxr-x 1 $ globalsmile $ globalsmile 13632 Jan  7 06:25 libholberton.so
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ nm -D libholberton.so 
 0000000000000a90 T _abs
 0000000000000aa9 T _atoi
 0000000000202048 B __bss_start
@@ -74,7 +75,7 @@ $ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ nm -D libholberton.so
 000000000000109d T _strspn
 0000000000001176 T _strstr
                  U write
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ cat 0-main.c
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ cat 0-main.c
 #include "holberton.h"
 #include <stdio.h>
 
@@ -88,37 +89,37 @@ int main(void)
     printf("%d\n", _strlen("Holberton"));
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ gcc -Wall -pedantic -Werror -Wextra -L. 0-main.c -lholberton -o len
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ ldd len 
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ gcc -Wall -pedantic -Werror -Wextra -L. 0-main.c -lholberton -o len
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ ldd len 
     linux-vdso.so.1 =>  (0x00007fff5d1d2000)
     libholberton.so => not found
     libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f74c6bb9000)
     /lib64/ld-linux-x86-64.so.2 (0x0000556be5b82000)
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ ldd len
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ ldd len
     linux-vdso.so.1 =>  (0x00007fff41ae9000)
     libholberton.so => ./libholberton.so (0x00007fd4bf2d9000)
     libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fd4beef6000)
     /lib64/ld-linux-x86-64.so.2 (0x0000557566402000)
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ ./len 
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ ./len 
 9
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$
 ```
 
-**Solution:** [libholberton.so](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/libholberton.so), [holberton.h](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/holberton.h)
+**Solution:** [libholberton.so](./libholberton.so), [holberton.h](./holberton.h)
 
 ## Without libraries what have we? We have no past and no future
 
 Create a script that creates a dynamic library called `liball.so` from all the `.c` files that are in the current directory.
 
-**Solution:** [1-create_dynamic_lib.sh](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/1-create_dynamic_lib.sh)
+**Solution:** [1-create_dynamic_lib.sh](./1-create_dynamic_lib.sh)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ ls *.c
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ ls *.c
 abs.c   isalpha.c  islower.c  memcpy.c  putchar.c  strcat.c  strcmp.c  strlen.c   strncpy.c  strspn.c
 atoi.c  isdigit.c  isupper.c  memset.c  puts.c     strchr.c  strcpy.c  strncat.c  strpbrk.c  strstr.c
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ ./1-create_dynamic_lib.sh 
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ nm -D --defined-only liball.so 
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ ./1-create_dynamic_lib.sh 
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$ nm -D --defined-only liball.so 
 0000000000000a90 T _abs
 0000000000000aa9 T _atoi
 0000000000202048 B __bss_start
@@ -144,17 +145,17 @@ $ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$ nm -D --defined-only libal
 0000000000001029 T _strpbrk
 000000000000109d T _strspn
 0000000000001176 T _strstr
-$ amonkeyprogrammer@ubuntu:~/0x18. Dynamic libraries$
+$ globalsmile@ubuntu:~/0x18. Dynamic libraries$
 ```
 
 ## Let's call C functions from Python
 
 Create a dynamic library that contains C functions that can be called from Python. See example for more detail.
 
-**Solution:** [100-operations.so](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/100-operations.so)
+**Solution:** [100-operations.so](./100-operations.so)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/0x18$ cat 100-tests.py
+$ globalsmile@ubuntu:~/0x18$ cat 100-tests.py
 import random
 import ctypes
 
@@ -166,31 +167,31 @@ print("{} - {} = {}".format(a, b, cops.sub(a, b)))
 print("{} x {} = {}".format(a, b, cops.mul(a, b)))
 print("{} / {} = {}".format(a, b, cops.div(a, b)))
 print("{} % {} = {}".format(a, b, cops.mod(a, b)))
-$ amonkeyprogrammer@ubuntu:~/0x16. Doubly linked lists$ python3 100-tests.py 
+$ globalsmile@ubuntu:~/0x16. Doubly linked lists$ python3 100-tests.py 
 66 + -76 = -10
 66 - -76 = 142
 66 x -76 = -5016
 66 / -76 = 0
 66 % -76 = 66
-$ amonkeyprogrammer@ubuntu:~/0x18$ python3 100-tests.py 
+$ globalsmile@ubuntu:~/0x18$ python3 100-tests.py 
 -34 + -57 = -91
 -34 - -57 = 23
 -34 x -57 = 1938
 -34 / -57 = 0
 -34 % -57 = -34
-$ amonkeyprogrammer@ubuntu:~/0x18$ python3 100-tests.py 
+$ globalsmile@ubuntu:~/0x18$ python3 100-tests.py 
 -5 + -72 = -77
 -5 - -72 = 67
 -5 x -72 = 360
 -5 / -72 = 0
 -5 % -72 = -5
-$ amonkeyprogrammer@ubuntu:~/0x18$ python3 100-tests.py 
+$ globalsmile@ubuntu:~/0x18$ python3 100-tests.py 
 39 + -62 = -23
 39 - -62 = 101
 39 x -62 = -2418
 39 / -62 = 0
 39 % -62 = 39
-$ amonkeyprogrammer@ubuntu:~/0x18$
+$ globalsmile@ubuntu:~/0x18$
 ```
 
 ## Code injection: Win the Giga Millions!
@@ -240,4 +241,4 @@ mss@gm_server$ ./gm 9 8 10 24 75 9
 mss@gm_server$ exit
 ```
 
-**Solution:** [101-make_me_win.sh](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x18-dynamic_libraries/101-make_me_win.sh)
+**Solution:** [101-make_me_win.sh](./101-make_me_win.sh)
