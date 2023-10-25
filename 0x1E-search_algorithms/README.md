@@ -21,10 +21,10 @@ Write a function that searches for a value in an array of integers using the [Li
 * If `value` is not present in `array` or if `array` is NULL, your function must return `-1`
 * Every time you compare a value in the array to the value you are searching, you have to print this value (see example below)
 
-**Solution:** [0-linear.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/0-linear.c)
+**Solution:** [0-linear.c](./0-linear.c)
 
 ```
-$ amonkeyprogrammer@0x1E-search_algorithms$ cat 0-main.c 
+$ globalsmile@0x1E-search_algorithms$ cat 0-main.c 
 #include <stdio.h>
 #include <stdlib.h>
 #include "search_algos.h"
@@ -46,8 +46,8 @@ int main(void)
     printf("Found %d at index: %d\n", 999, linear_search(array, size, 999));
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@0x1E-search_algorithms$ gcc -Wall -Wextra -Werror -pedantic 0-main.c 0-linear.c -o 0-linear
-$ amonkeyprogrammer@0x1E-search_algorithms$ ./0-linear 
+$ globalsmile@0x1E-search_algorithms$ gcc -Wall -Wextra -Werror -pedantic 0-main.c 0-linear.c -o 0-linear
+$ globalsmile@0x1E-search_algorithms$ ./0-linear 
 Value checked array[0] = [10]
 Value checked array[1] = [1]
 Value checked array[2] = [42]
@@ -86,10 +86,10 @@ Write a function that searches for a value in a sorted array of integers using t
 * If `value` is not present in `array` or if `array` is `NULL`, your function must return -1
 * You must print the array being searched every time it changes. (e.g. at the beginning and when you search a subarray) (See example)
 
-**Solution:** [1-binary.c](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/1-binary.c)
+**Solution:** [1-binary.c](./1-binary.c)
 
 ```
-$ amonkeyprogrammer@0x1E-search_algorithms$ cat 1-main.c 
+$ globasmile@0x1E-search_algorithms$ cat 1-main.c 
 #include <stdio.h>
 #include <stdlib.h>
 #include "search_algos.h"
@@ -111,8 +111,8 @@ int main(void)
     printf("Found %d at index: %d\n", 999, binary_search(array, size, 999));
     return (EXIT_SUCCESS);
 }
-$ amonkeyprogrammer@0x1E-search_algorithms$ gcc -Wall -Wextra -Werror -pedantic 1-main.c 1-binary.c -o 1-binary
-$ amonkeyprogrammer@0x1E-search_algorithms$ ./1-binary 
+$ globalsmile@0x1E-search_algorithms$ gcc -Wall -Wextra -Werror -pedantic 1-main.c 1-binary.c -o 1-binary
+$ globalsmile@0x1E-search_algorithms$ ./1-binary 
 Searching in array: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 Searching in array: 0, 1, 2, 3
 Searching in array: 2, 3
@@ -134,31 +134,31 @@ Found 999 at index: -1
 
 What is the `time complexity` (worst case) of a linear search in an array of size `n`?
 
-**Solution:** [2-O](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/2-O)
+**Solution:** [2-O](./2-O)
 
 ## Big O #1
 
 What is the `space complexity` (worst case) of an iterative linear search algorithm in an array of size `n`?
 
-**Solution:** [3-O](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/3-O)
+**Solution:** [3-O](./3-O)
 
 ## Big O #2
 
 What is the `time complexity` (worst case) of a binary search in an array of size `n`?
 
-**Solution:** [4-O](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/4-O)
+**Solution:** [4-O](./4-O)
 
 ## Big O #3
 
 What is the `space complexity` (worst case) of a binary search in an array of size `n`?
 
-**Solution:** [5-O](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/5-O)
+**Solution:** [5-O](./5-O)
 
 ## Big O #4
 
 What is the space complexity of this function / algorithm?
 
-**Solution:** [6-O](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/6-O)
+**Solution:** [6-O](./6-O)
 
 ```C
 int **allocate_map(int n, int m)
@@ -178,16 +178,16 @@ int **allocate_map(int n, int m)
 
 What is the `time complexity` (average case) of a jump search in an array of size `n`, using `step = sqrt(n)`?
 
-**Solution:** [101-O](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/101-O)
+**Solution:** [101-O](./101-O)
 
 ## Big O #6
 
 What is the `time complexity` (average case) of a jump search in a singly linked list of size n, using `step = sqrt(n)`?
 
-**Solution:** [107-O](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/107-O)
+**Solution:** [107-O](./107-O)
 
 ## Big O #7
 
 What is the `time complexity` (average case) of a jump search in a skip list of size n, with an express lane using `step = sqrt(n)`?
 
-**Solution:** [108-O](https://github.com/monoprosito/holbertonschool-low_level_programming/blob/master/0x1E-search_algorithms/108-O)
+**Solution:** [108-O](./108-O)
